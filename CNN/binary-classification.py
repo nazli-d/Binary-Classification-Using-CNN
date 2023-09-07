@@ -1,16 +1,8 @@
-"""
-AÇIKLAMA: 
-Bu kod binary classification(kedi,köpek) yapiyor. 20ser adet kedi ve kopek resmi bulup egitimi yaptım egitimi tamamladiktan sonra 
-15er adet kedi ve kopek fotografi bulup bu fotograflari siniflandirarak test islemini gerceklestirdim. Bu test sonucunda 15 adet kedi fotografindan 10 adet fotografin
- kedi oldugunu bildi. 15 adet kopek fotografindan da 11 adedinin köpek olduğunu bildi.
-"""
-
 import tensorflow as tf
-from keras.preprocessing.image import ImageDataGenerator                                                   # keras kütüphanesini kullandığım için tensorflowu ekledim.
+from keras.preprocessing.image import ImageDataGenerator                                                  
 
 train_datagen = ImageDataGenerator(rescale = 1./255, shear_range =0.2, zoom_range =0.2, horizontal_flip = True)
 
-# resim boyutlarını 64x64 boyutuna getirerek tüm fotoğrafları eşit boyuta getirmeyi ve süreyi kısaltmayı amaçladım.
 training_set =train_datagen.flow_from_directory(r'C:\Users\asus\Desktop\CNN\cnn', target_size = (64,64), batch_size = 32, class_mode = 'binary')
 
 test_datagen = ImageDataGenerator(rescale = 1./255)
@@ -26,10 +18,10 @@ cnn.add(tf.keras.layers.Dense(units=128,activation='relu'))
 cnn.add(tf.keras.layers.Dense(units=1,activation='sigmoid'))                                               # çıkış katmanı sigmoid 0 ve 1 ler olarak çıkıyor. output 1 ise köpek, 0 ise kedi dir.
 
 cnn.compile(optimizer = 'adam', loss ='binary_crossentropy',metrics = ['accuracy'])
-cnn.fit(x =training_set,validation_data = test_set,epochs=10)                                              # compile işlemi yapıp accuracy yani doğruluk değerini öğrenmiş oluruz.
+cnn.fit(x =training_set,validation_data = test_set,epochs=10)                                             
 
 
-# eğitim tamamlandı şimdi sıra tahmin ederek sınıflandırma işlemi yapmada. 
+
 import numpy as np
 import keras.utils as image
 
