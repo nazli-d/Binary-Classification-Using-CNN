@@ -51,4 +51,6 @@ Proje dosyalarını indirdikten sonra, aşağıdaki adımları takip ederek proj
 ### Köpek fotoğraflarının testi
 ![](https://github.com/nazli-d/Binary-Classification-Using-CNN/blob/main/outputs/test-1.jpg)
 
+### Kedi fotoğraflarının testi
+![](https://github.com/nazli-d/Binary-Classification-Using-CNN/blob/main/outputs/test-2.jpg)
 
