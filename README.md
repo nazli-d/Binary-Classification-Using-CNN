@@ -45,3 +45,10 @@ Proje dosyalarını indirdikten sonra, aşağıdaki adımları takip ederek proj
 2. Gerekli kütüphaneleri yükleyin.
 3. Modelin oluşturulması ve eğitimi için `binary-classification.py` dosyasını çalıştırın.
 4. Test işlemi için `CNN` dosyasında bulunan `test_image` dosyasına test etmek istediğiniz resimleri yükleyin.
+
+## Test Görüntüleri
+
+### Köpek fotoğraflarının testi
+![](https://github.com/nazli-d/Binary-Classification-Using-CNN/blob/main/outputs/test-1.jpg)
+
+
